@@ -1,0 +1,6 @@
+**/*.test.js
+**/*_test.js
+test/helpers/**/*
+test/unit/**/*
+scripts/**/*
+dist/**/*

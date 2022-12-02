@@ -102,3 +102,11 @@ dist
 
 # TernJS port file
 .tern-port
+
+
+
+.DS_Store
+src/workerLogParser/temp.json
+
+src/mural-seeder-data/outputFiles
+src/ignoredFiles

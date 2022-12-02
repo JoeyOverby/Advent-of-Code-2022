@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es2021",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "noImplicitAny": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "noEmitOnError": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "alwaysStrict": true,
+    "declaration": true,
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "suppressImplicitAnyIndexErrors": true,
+  },
+  "include": ["./src/**/*.ts"],
+  "exclude": ["node_modules"]
+}
