@@ -1,6 +1,6 @@
 import { readFileSync } from 'fs';
 
-export const readInputToArray = (filename: string): number[] => {
+export const readInputToArrayAndSum = (filename: string): number[] => {
   console.log(`Reading from file: ${filename}`);
   const toReturn: number[] = [];
 
@@ -11,7 +11,7 @@ export const readInputToArray = (filename: string): number[] => {
   let index = 1;
 
   arr.forEach(function(line) {
-    console.log(line);
+    // console.log(line);
 
     if (line === '') {
       index++;

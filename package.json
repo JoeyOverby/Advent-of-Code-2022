@@ -2,7 +2,6 @@
   "name": "joeyoverby-advent-of-code-2022",
   "version": "1.0.0",
   "private": true,
-  "main": "index.js",
   "engines": {
     "node": "16.13.2",
     "npm": "8.1.2"
@@ -10,35 +9,31 @@
   "pre-commit": [
     "lint"
   ],
-  "snyk": false,
   "dependencies": {
+    "jshint": "2.13.6"
   },
   "devDependencies": {
     "@types/node": "12.7.5",
-    "@typescript-eslint/eslint-plugin": "4.28.1",
-    "@typescript-eslint/parser": "4.28.1",
-    "eslint": "6.8.0",
-    "eslint-config-prettier": "6.9.0",
-    "eslint-plugin-muralco": "1.0.3",
+
+    "@typescript-eslint/eslint-plugin": "5.13.0",
+    "@typescript-eslint/parser": "5.13.0",
+    "eslint": "7.32.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-muralco": "1.5.0",
     "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-prettier": "3.1.2",
-    "prettier": "1.18.2",
-    "tslint": "5.11.0",
-    "tslint-config-airbnb": "5.10.0",
-    "tslint-config-prettier": "1.18.0",
-    "tslint-plugin-prettier": "2.0.1",
-    "typescript": "3.6.3"
+    "eslint-plugin-prettier": "3.4.1",
+    "prettier": "1.19.1",
+    "typescript": "4.8.2"
   },
   "scripts": {
     "build": "tsc",
     "clean": "rm -rf ./node_modules",
-    "impact": "./scripts/test-impact.sh",
     "lint": "npm run prettier:check && npm run lint:js && npm run lint:ts",
+    "lint:fix": "eslint --fix --cache  './src/**/*.ts' './src/*.ts'",
     "lint:js": "eslint .",
     "lint:ts": "tslint -p .",
-    "prepare": "",
-    "prettier:check": "prettier --check ./{lib,src,test}/**/*.{js,ts}",
-    "prettier:write": "prettier --write ./{lib,src,test}/**/*.{js,ts}",
+    "prettier:check": "prettier --check ./{src,test}/**/*.{js,ts}",
+    "prettier:write": "prettier --write ./{src,test}/**/*.{js,ts}",
     "start": "tsc --watch & nodemon"
   }
 }

@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-import { readInputToArray } from '../helpers/fileReader';
+import { readInputToArrayAndSum } from '../helpers/fileReader';
 const path = require('path');
 
 console.log('Starting Day 01 Puzzle Solving');
 
 const absolutePath = path.resolve('./src/day01/input.txt');
-const input = readInputToArray(absolutePath);
+const input = readInputToArrayAndSum(absolutePath);
 
 let max = 0;
 

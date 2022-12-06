@@ -1,5 +1,4 @@
 {
-  "editor.formatOnSave": false,
   "[javascript]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -10,18 +9,29 @@
   },
   "prettier.useTabs": false,
   "files.exclude": {
-    "dist": true
+    ".nyc_output": true,
+    "**/.eslintcache": true,
+    "**/dist": true,
+    "**/node_modules": true,
+    "**/coverage": true
   },
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
   "eslint.options": {
-    "parserOptions": {
-      "project": [
-        "${workspaceFolder}/tsconfig.json"
-      ]
+    "overrideConfig": {
+      "parserOptions": {
+        "project": ["${workspaceFolder}/tsconfig.json"]
+      }
     }
   },
-  "jshint.config": "",
-  "jshint.exclude": {"**/node_modules/**": true }
+  "eslint.useESLintClass": true,
+  "[feature]": {
+    "editor.quickSuggestions": {
+      "comments": false,
+      "strings": true,
+      "other": true
+    }
+  },
+  "search.useIgnoreFiles": false
 }
